@@ -2,5 +2,8 @@
 *.swo
 *.swp
 
+# env
+.env
+
 # MacBook
 .DS_Store
