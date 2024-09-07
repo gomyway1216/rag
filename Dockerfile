@@ -8,6 +8,8 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -U pip
+RUN pip install poetry
+RUN poetry export --without-hashes > requirements.txt
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
