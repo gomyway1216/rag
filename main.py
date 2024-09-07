@@ -38,10 +38,24 @@ class ChatResponse(BaseModel):
 
 @app.post("/query", response_model=ChatResponse, status_code=200)
 def query(chat_request: ChatRequest):
-    # TODO: perform similarity search on the message (RAG)
+    # Perform similarity search and fetch relevant information
+    rag_result = collection.query(
+        query_texts=[chat_request.message],
+        n_results=1,
+    )["documents"][0][0]
+
+    # Perform chat completion using the retrieved information
+    # TODO: Clean up the query text
+    # TODO: Add integration tests
+    query_text = f"Use this information: {rag_result}\n"
+    query_text += "=" * 80 + "\n"
+    query_text += "Reply 'I don't know' if you don't find the answer in the given context.\n"
+    query_text += "=" * 80 + "\n"
+    query_text += chat_request.message
+
     response = openai_client.chat.completions.create(
         model="gpt-4o",
-        messages=[{"role": "user", "content": chat_request.message}],
+        messages=[{"role": "user", "content": query_text}],
     )
     return ChatResponse(message=response.choices[0].message.content)
 
@@ -52,16 +66,8 @@ class LearnRequest(BaseModel):
 
 @app.post("/learn", status_code=204)
 def learn(learn_request: LearnRequest):
-    embedding = (
-        openai_client.embeddings.create(
-            input=[learn_request.text], model="text-embedding-3-large"
-        )
-        .data[0]
-        .embedding
-    )
     collection.add(
         documents=[learn_request.text],
-        embeddings=[embedding],
         ids=[uuid.uuid4().hex],
     )
     return
