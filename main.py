@@ -1,5 +1,4 @@
 import os
-from typing import Union
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -26,4 +25,8 @@ class ChatResponse(BaseModel):
 
 @app.post("/query", response_model=ChatResponse, status_code=200)
 def query(chat_request: ChatRequest):
-    return ChatResponse(message=chat_request.message)
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": chat_request.message}],
+    )
+    return ChatResponse(message=response.choices[0].message.content)
