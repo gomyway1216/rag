@@ -1,8 +1,16 @@
+import os
 from typing import Union
 
+from openai import OpenAI
 from fastapi import FastAPI
 
+
+API_KEY = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=API_KEY)
+
 app = FastAPI()
+
+l = []
 
 
 @app.get("/")
