@@ -8,7 +8,7 @@ from openai import OpenAI
 
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 chromadb_client = chromadb.HttpClient(
-    host="chromadb",
+    host=os.getenv("CHROMADB_HOST", "chromadb"),
     port=8000,
     ssl=False,
     headers=None,

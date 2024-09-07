@@ -1,0 +1,38 @@
+name: FastAPI Testing
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      chromadb:
+        image: chromadb/chroma:latest
+        env:
+          IS_PERSISTENT: TRUE
+          PERSIST_DIRECTORY: /chroma/chroma
+        ports:
+          - 8000:8000
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+          cache: 'poetry'
+
+      - name: Install dependencies
+        run: poetry install --with dev
+
+      - name: Run tests
+        env:
+          # TODO: Set API key for tests in GitHub Repo Secrets ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: dummy
+          CHROMADB_HOST: localhost
+        run: poetry run pytest
