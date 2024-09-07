@@ -1,4 +1,5 @@
 import os
+import uuid
 
 import chromadb
 from fastapi import FastAPI
@@ -49,19 +50,18 @@ class LearnRequest(BaseModel):
     text: str = Field(description="The text to be learned by the chatbot")
 
 
-@app.post("/learn", response_model=ChatResponse, status_code=200)
+@app.post("/learn", status_code=204)
 def learn(learn_request: LearnRequest):
-    # 1. generate embeddings for the text: OpenAI
-    embeddings = (
+    embedding = (
         openai_client.embeddings.create(
             input=[learn_request.text], model="text-embedding-3-large"
         )
         .data[0]
         .embedding
     )
-    # 2. store the embeddings in the vector database: ChromaDB
-    res = collection.add(
-        # FIXME: add `ids`
-        embeddings=[embeddings],
+    collection.add(
+        documents=[learn_request.text],
+        embeddings=[embedding],
+        ids=[uuid.uuid4().hex],
     )
-    return ChatResponse(message=str(res))
+    return
