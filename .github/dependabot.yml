@@ -3,8 +3,9 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     reviewers:
       - "huyfififi"
       - "gomyway1216"
+      - "carolina-museum"
     versioning-strategy: "increase"
