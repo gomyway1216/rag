@@ -33,7 +33,7 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    message: str = Field(description="The message to be sent to the chatbot")
+    message: str = Field(description="The message to be responded by the chatbot")
 
 
 @app.post("/query", response_model=ChatResponse, status_code=200)
