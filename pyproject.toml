@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 chromadb = "0.5.11"
-openai = "1.47.1"
+openai = "1.51.0"
 fastapi = {extras = ["standard"], version = "0.115.0"}
 
 
@@ -22,6 +22,10 @@ python_files = [
     "tests.py",
     "test_*.py",
     "*_test.py",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:google._upb._message.MessageMapContainer",
+    "ignore::DeprecationWarning:google._upb._message.ScalarMapContainer"
 ]
 
 [build-system]
