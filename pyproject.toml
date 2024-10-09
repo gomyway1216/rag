@@ -24,8 +24,7 @@ python_files = [
     "*_test.py",
 ]
 filterwarnings = [
-    "ignore::DeprecationWarning:google._upb._message.MessageMapContainer",
-    "ignore::DeprecationWarning:google._upb._message.ScalarMapContainer"
+    "ignore:Type google._upb._message:DeprecationWarning"  # chromadb
 ]
 
 [build-system]
