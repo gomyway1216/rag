@@ -49,7 +49,7 @@ def query(chat_request: ChatRequest):
     # TODO: Add integration tests
     query_text = f"Use this information: {rag_result}\n"
     query_text += "=" * 80 + "\n"
-    query_text += "Reply 'I don't know' if you don't find the answer in the given context.\n"
+    query_text += "Reply 'I have no idea.' if you don't find the answer in the given context.\n"
     query_text += "=" * 80 + "\n"
     query_text += chat_request.message
 
