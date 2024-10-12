@@ -38,24 +38,17 @@ class ChatResponse(BaseModel):
 
 @app.post("/query", response_model=ChatResponse, status_code=200)
 def query(chat_request: ChatRequest):
-    # Perform similarity search and fetch relevant information
-    rag_result = collection.query(
-        query_texts=[chat_request.message],
-        n_results=1,
-    )["documents"][0][0]
-
-    # Perform chat completion using the retrieved information
-    # TODO: Clean up the query text
-    # TODO: Add integration tests
-    query_text = f"Use this information: {rag_result}\n"
-    query_text += "=" * 80 + "\n"
-    query_text += "Reply 'I have no idea.' if you don't find the answer in the given context.\n"
-    query_text += "=" * 80 + "\n"
-    query_text += chat_request.message
+    rag_result = collection.query(query_texts=[chat_request.message], n_results=1,)[
+        "documents"
+    ][0][0]
 
     response = openai_client.chat.completions.create(
         model="gpt-4o",
-        messages=[{"role": "user", "content": query_text}],
+        messages=[
+            {"role": "system", "content": "You are a therapist."},
+            {"role": "system", "content": rag_result},
+            {"role": "user", "content": chat_request.message},
+        ],
     )
     return ChatResponse(message=response.choices[0].message.content)
 
