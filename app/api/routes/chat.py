@@ -37,12 +37,11 @@ def read_root():
 
 @router.post("/query", response_model=ChatResponse, status_code=200)
 def query(chat_request: ChatRequest):
+    # FIXME: This operation raises an error when the collection is empty
     rag_result = learn_collection.query(
         query_texts=[chat_request.message],
         n_results=1,
-    )[
-        "documents"
-    ][0][0]
+    )["documents"][0][0]
 
     response = openai_client.chat.completions.create(
         model="gpt-4o",
