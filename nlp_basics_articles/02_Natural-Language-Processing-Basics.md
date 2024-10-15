@@ -12,9 +12,17 @@ I will dig into **n-grams** (and their neural network expression), **RNN/LSTM**,
 ## Natural Language Processing Tasks
 What do natural language processing models do? What can we do with them? \
 Some of the most common tasks are: 
-- next word prediction
-- sentiment classification
-- language translation
-- summarization
-- Q&A
-- Text generation
+- next word prediction: Given a sequence of words, predict what word(s) will come next.
+- fill in the blank: Given a sequence of words with a blank, predict what word(s) will fill the blank.
+- sentiment classification: Given a text, classify it into types of opinions (happy, unsatisfied, etc) stated.
+- language translation: Given a text in a language, translate it into another language.
+- summarization: Given a text, make it more concise (shorter).
+- Q&A: Given a question text, answer to the question.
+- text generation: Create texts.
+
+<p align="center">
+<img width="633" alt="Screenshot 2024-10-15 at 12 49 36" src="https://github.com/user-attachments/assets/063c4b09-50c9-41e5-8576-cf7483d7e446">
+</p>
+<p align="center">
+Figure 1. Illustration of next word prediction using a language model
+</p>
