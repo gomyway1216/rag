@@ -11,3 +11,7 @@ class ChatResponse(BaseModel):
 
 class LearnRequest(BaseModel):
     text: str = Field(description="The text to be learned by the chatbot")
+
+
+#####
+
