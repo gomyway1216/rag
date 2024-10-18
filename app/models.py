@@ -21,4 +21,4 @@ class BMIRequest(BaseModel):
 
 # Practice
 class BMIResponse(BaseModel):
-    message: str = Field(description="BMI value to be responded by the chatbot")
+    bmi: float = Field(description="BMI value to be responded by the chatbot")
