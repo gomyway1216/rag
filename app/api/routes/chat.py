@@ -9,6 +9,8 @@ from app.models import (
     ChatRequest,
     ChatResponse,
     LearnRequest,
+    BMIRequest,
+    BMIResponse
 )
 
 
@@ -53,6 +55,16 @@ def query(chat_request: ChatRequest):
     )
     return ChatResponse(message=response.choices[0].message.content)
 
+@router.post("/bmi", response_model=BMIResponse, status_code=200)
+def bmi(bmi_request: BMIRequest):
+    print("request received")
+    weight = bmi_request.weight
+    height = bmi_request.height
+    bmi = round(weight/((height/100)**2), 2)
+    print(bmi)
+    bmi_result_message = "Your BMI is " + str(bmi) + "."
+    return BMIResponse(message=bmi_result_message)
+    
 
 @router.post("/learn", status_code=204)
 def learn(learn_request: LearnRequest):
