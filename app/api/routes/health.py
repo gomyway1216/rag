@@ -1,27 +1,6 @@
-# health information
-
-import os
-
-import chromadb
 from fastapi import APIRouter
-from openai import OpenAI
 
 from app.models import BMIRequest, BMIResponse
-
-
-openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-chromadb_client = chromadb.HttpClient(
-    host=os.getenv("CHROMADB_HOST", "chromadb"),
-    port=8000,
-    ssl=False,
-    headers=None,
-    settings=chromadb.config.Settings(),
-    tenant=chromadb.config.DEFAULT_TENANT,
-    database=chromadb.config.DEFAULT_DATABASE,
-)
-learn_collection = chromadb_client.get_or_create_collection(
-    name="learn",
-)
 
 
 router = APIRouter()
