@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.12"
 chromadb = "0.5.18"
 openai = "1.54.3"
-fastapi = {extras = ["standard"], version = "0.115.4"}
+fastapi = {extras = ["standard"], version = "0.115.5"}
 
 
 [tool.poetry.group.dev.dependencies]
