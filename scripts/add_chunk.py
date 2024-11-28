@@ -33,7 +33,6 @@ my_ids = [f"{uuid.uuid4().hex}" for _ in range(len(my_documents))]
 
 
 learn_collection.add(
-        documents=my_documents,
-        ids=my_ids,
+    documents=my_documents,
+    ids=my_ids,
 )
-
