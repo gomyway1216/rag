@@ -1,7 +1,6 @@
 import os
 
 import chromadb
-from fastapi import APIRouter
 from openai import OpenAI
 
 
@@ -22,8 +21,6 @@ except ValueError:
     print("There is no collection. I will make one for you!")
     learn_collection = chromadb_client.create_collection(name="learn")
 
-
-router = APIRouter()
 
 f = open("../data/RAG_chunk_evaluation_questions.txt", "r")
 my_queries = f.read().split("\n")
