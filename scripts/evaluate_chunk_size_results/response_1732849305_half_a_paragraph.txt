@@ -1,0 +1,118 @@
+half_a_paragraph
+#############################################################
+---------- Qeuestion 1 ----------
+On what year did the author start college?
+---------- Retrieved text from the database ----------
+My studies the first year were French, German, history, English composition and English literature. In the French course I read some of the works of Corneille, Moliere, Racine, Alfred de Musset and Sainte-Beuve, and in the 
+---------- Answer to the question ----------
+The text provided does not specify a particular year in which the author started college. Additional information would be needed to determine the specific year.
+#############################################################
+---------- Qeuestion 2 ----------
+How did the author feel when she joined the college?
+---------- Retrieved text from the database ----------
+e became beautifully less and "faded into the light of common day." Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+The author initially found the experience of going to college to have a certain appeal or beauty but later began to notice the disadvantages. This suggests that while there may have been an initial excitement or sense of wonder, it eventually gave way to more practical or mundane concerns.
+#############################################################
+---------- Qeuestion 3 ----------
+Was the author disappointed when she faced the reality of college?
+---------- Retrieved text from the database ----------
+e became beautifully less and "faded into the light of common day." Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+Yes, the author seems to express a sense of disappointment upon facing the reality of college. The phrase "faded into the light of common day" suggests that the initial excitement or idealism she had about college diminished over time as she encountered the disadvantages and realities of the experience.
+#############################################################
+---------- Qeuestion 4 ----------
+Why did the author think that there is no enough time when she joined college?
+---------- Retrieved text from the database ----------
+e became beautifully less and "faded into the light of common day." Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+The author likely felt there was not enough time in college due to the increased demands and responsibilities that come with higher education. College often requires students to balance a heavier workload with classes, assignments, and extracurricular activities, leading to a feeling that there is insufficient time to manage everything effectively. Additionally, the new environment and expectations can create a sense of urgency or pressure to achieve academically and socially, contributing to the perception of limited time.
+#############################################################
+---------- Qeuestion 5 ----------
+What did the author study in her first year?
+---------- Retrieved text from the database ----------
+My studies the first year were French, German, history, English composition and English literature. In the French course I read some of the works of Corneille, Moliere, Racine, Alfred de Musset and Sainte-Beuve, and in the 
+---------- Answer to the question ----------
+In her first year, the author studied French, German, history, English composition, and English literature.
+#############################################################
+---------- Qeuestion 6 ----------
+How much was the author able to concentrate to the lecture compared to her peers?
+---------- Retrieved text from the database ----------
+ be living, tangible interpreters of the real world. The lecture-halls seemed filled with the spirit of the great and the wise, and I thought the professors were the embodiment of wisdom. If I have since learned differently, I am not going to tell anybody.
+---------- Answer to the question ----------
+The author felt that she was able to concentrate better than most of her peers. While others might have viewed lecture halls as ordinary rooms, she found them filled with the spirit of the great and wise, and thought of the professors as embodiments of wisdom, suggesting a deep engagement and concentration in the learning environment.
+#############################################################
+---------- Qeuestion 7 ----------
+In one word, what does the author use to write down? Was this important to her?
+---------- Retrieved text from the database ----------
+German those of Goethe and Schiller. I reviewed rapidly the whole period of history from the fall of the Roman Empire to the eighteenth century, and in English literature studied critically Milton's poems and "Areopagitica.
+---------- Answer to the question ----------
+Pen. Yes, it was important to her.
+#############################################################
+---------- Qeuestion 8 ----------
+What makes her jealous about other girls?
+---------- Retrieved text from the database ----------
+I had taken to heart the words of the wise Roman who said, "To be banished from Rome is but to live outside of Rome." Debarred from the great highways of knowledge, I was compelled to make the journey across country by unfrequented roads—that was all; and I knew that in college there were many bypaths where I could touch hands with girls who were thinking, loving and struggling like me
+---------- Answer to the question ----------
+She might feel jealous of other girls who have unrestricted access to education and the conventional pathways to knowledge, something she feels debarred from. These girls might appear to have an easier time with their academic pursuits and opportunities that she has to struggle harder for. Additionally, she might envy their ability to partake in the social and intellectual interactions that she values and seeks out, but finds herself somewhat excluded from.
+#############################################################
+---------- Qeuestion 9 ----------
+What did the author like about the composition class in her second year?
+---------- Retrieved text from the database ----------
+Last year, my second year at Radcliffe, I studied English composition, the Bible as English composition, the governments of America and Europe, the Odes of Horace, and Latin comedy. The class in composition was the pleasantest. It was very lively. The lectures were always interesting, vivacious, witty; for the instructor, Mr. Charles Townsend Copeland, more than any one else I have had until this year, brings before you literature in all its original freshness and power.
+---------- Answer to the question ----------
+The author liked the composition class because it was very lively, with lectures that were interesting, vivacious, and witty. The instructor, Mr. Charles Townsend Copeland, was able to bring literature to life in its original freshness and power, which made the class particularly pleasant for the author.
+#############################################################
+---------- Qeuestion 10 ----------
+How does the author like to enjoy literature works?
+---------- Retrieved text from the database ----------
+Last year, my second year at Radcliffe, I studied English composition, the Bible as English composition, the governments of America and Europe, the Odes of Horace, and Latin comedy. The class in composition was the pleasantest. It was very lively. The lectures were always interesting, vivacious, witty; for the instructor, Mr. Charles Townsend Copeland, more than any one else I have had until this year, brings before you literature in all its original freshness and power.
+---------- Answer to the question ----------
+The author enjoys literature works in a lively and engaging manner. They appreciate lectures that are interesting, vivacious, and witty, suggesting that they prefer an animated and dynamic presentation of literature that brings out its original freshness and power. They particularly valued their instructor, Mr. Charles Townsend Copeland, for his ability to present literature in such a vibrant way.
+#############################################################
+---------- Qeuestion 11 ----------
+What does the author mean when she says "overtaxed mind cannot enjoy the treasure it has secured at the greatest cost"?
+---------- Retrieved text from the database ----------
+ghts. One goes to college to learn, it seems, not to think. When one enters the portals of learning, one leaves the dearest pleasures—solitude, books and imagination—outside with the whispering pines. I suppose I ought to find some comfort in the thought that I am laying up treasures for future enjoyment, but I am improvident enough to prefer present joy to hoarding riches against a rainy day.
+---------- Answer to the question ----------
+The author suggests that when a mind is overworked or burdened with too much information or stress, it cannot fully appreciate or benefit from the knowledge or experiences it has gained, even if acquiring that knowledge came at a significant effort or cost. Essentially, the mental strain diminishes the capacity to enjoy or make use of what has been learned or achieved.
+#############################################################
+---------- Qeuestion 12 ----------
+What is Huss an example of?
+---------- Retrieved text from the database ----------
+"Give a brief account of Huss and his work." Huss? Who was he and what did he do? The name looks strangely familiar. You ransack your budget of historic facts much as you would hunt for a bit of silk in a rag-bag. You are sure it is somewhere in your mind near the top—you saw it there the other day when you were looking up the beginnings of the Reformation. But where is it now? You fish out all m
+---------- Answer to the question ----------
+Huss is an example of an early reformer in the Christian church, specifically within the context of the pre-Reformation era. Jan Hus, a Czech theologian and priest, was a significant figure who challenged the practices and doctrines of the Catholic Church in the early 15th century. His calls for reform and critiques of church corruption laid the groundwork for the Protestant Reformation that would follow in the 16th century. Huss's teachings and martyrdom (he was burned at the stake in 1415) exemplify the tensions and conflicts that arose from calls for religious reform and the eventual radical changes in Christianity during that period.
+#############################################################
+---------- Qeuestion 13 ----------
+How did the author feel when she took an exam?
+---------- Retrieved text from the database ----------
+ must zigzag it in my own way. I slip back many times, I fall, I stand still, I run against the edge of hidden obstacles, I lose my temper and find it again and keep it better, I trudge on, I gain a little, I feel encouraged, I get more eager and climb higher and begin to see the widening horizon. Every struggle is a victory. One more effort and I reach the luminous cloud, the blue depths of the sky, the uplands of my desire. I am not always alone, however, in these struggles. Mr. William Wade and Mr. E. E. Allen, Principal of the Pennsylvania Institution for the Instruction of the Blind, get for me many of the books I need in raised print. Their thoughtfulness has been more of a help and encouragement to me than they can ever know
+---------- Answer to the question ----------
+The author likely felt a mix of emotions when taking an exam. She described the experience as full of struggles and challenges, often slipping back or facing obstacles, but ultimately gaining progress and encouragement from each struggle. Her determination and the support from individuals like Mr. William Wade and Mr. E. E. Allen helped her feel more capable and eager to continue striving towards her goals.
+#############################################################
+---------- Qeuestion 14 ----------
+What is one lesson that the author learned through attending college?
+---------- Retrieved text from the database ----------
+ be living, tangible interpreters of the real world. The lecture-halls seemed filled with the spirit of the great and the wise, and I thought the professors were the embodiment of wisdom. If I have since learned differently, I am not going to tell anybody.
+---------- Answer to the question ----------
+The author learned that their initial idealistic perception of college professors as the ultimate embodiment of wisdom might not fully align with reality. However, they humorously choose not to divulge the specifics of how their perspective has changed.
+#############################################################
+---------- Qeuestion 15 ----------
+What should the author do to improve her life?
+---------- Retrieved text from the database ----------
+Very few of the books required in the various courses are printed for the blind, and I am obliged to have them spelled into my hand. Consequently I need more time to prepare my lessons than other girls. The manual part takes longer, and I have perplexities which they have not. There are days when the close attention I must give to details chafes my spirit, and the thought that I must spend hours reading a few chapters, while in the world without other girls are laughing and singing and dancing, makes me rebellious; but I soon recover my buoyancy and laugh the discontent out of my heart. For, after all, every one who wishes to gain true knowledge must climb the Hill Difficulty alone, and since there is no royal road to the summit, I
+---------- Answer to the question ----------
+The author could consider several approaches to improve her life, focusing on enhancing her study methods, managing her emotions, and embracing community. Here are a few suggestions:
+
+1. **Seek Assistive Technology:** Exploring modern assistive technologies designed for the visually impaired may help her study more efficiently. Tools like screen readers, voice-to-text software, or braille e-readers can significantly reduce the time and effort required to study.
+
+2. **Time Management Strategies:** Developing effective time management techniques can help her maximize her study time and balance it with leisure activities. Prioritizing tasks and breaking down her workload into manageable parts could alleviate some of the pressure.
+
+3. **Emotional Support and Counseling:** Finding a mentor, joining support groups, or seeking counseling could help her process feelings of frustration and rebelliousness. Sharing experiences with others who face similar challenges might also provide comfort and motivation.
+
+4. **Community Involvement:** Engaging more with her community and peers might help her feel less isolated. This could include joining clubs, participating in group activities, or social events that accommodate her needs.
+
+5. **Adaptation and Flexibility:** Cultivating resilience and a positive outlook can help her navigate her difficulties. Embracing her unique journey and finding joy in small victories can contribute to a more fulfilling life experience. 
+
+By adopting some of these strategies, the author could potentially improve her overall quality of life, balancing academics with personal happiness.

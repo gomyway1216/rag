@@ -1,0 +1,122 @@
+quarter_a_paragraph
+#############################################################
+---------- Qeuestion 1 ----------
+On what year did the author start college?
+---------- Retrieved text from the database ----------
+o the kind of writing one wishes to do on the typewriter. Without it, I doubt if I could go to college
+---------- Answer to the question ----------
+The information provided does not specify the year the author started college. Additional context or details about the author's timeline would be needed to determine the year.
+#############################################################
+---------- Qeuestion 2 ----------
+How did the author feel when she joined the college?
+---------- Retrieved text from the database ----------
+ one hears only in leisure moments when the words of some loved poet touch a deep, sweet chord in the soul that until then had been silent. But in college there is no time to commune with one's thou
+---------- Answer to the question ----------
+The author felt that there was little time for personal reflection or to fully engage with and appreciate the personal and emotional resonance of literature, such as poetry, when she joined college. The busy schedule and demands of college life seemed to limit opportunities for leisure moments that allow such deep, personal connections.
+#############################################################
+---------- Qeuestion 3 ----------
+Was the author disappointed when she faced the reality of college?
+---------- Retrieved text from the database ----------
+But college is not the universal Athens I thought it was. There one does not meet the great and the wise face to face; one does not even feel their living touch. They are there, it is true; but they seem mummified. We must extract them from the crannied wall of learning and dissect and analyze them before we can be sure that we have a Milton or an Isaiah, an
+---------- Answer to the question ----------
+Yes, the author seems to express disappointment with her college experience. She anticipated college to be a place where she would encounter the great and wise in a vibrant and personal way, but instead found that these figures seemed distant and lifeless, almost like "mummified" entities. The author felt the need to actively extract, dissect, and analyze them to truly understand their significance, suggesting a gap between her expectations and the reality she faced.
+#############################################################
+---------- Qeuestion 4 ----------
+Why did the author think that there is no enough time when she joined college?
+---------- Retrieved text from the database ----------
+ one hears only in leisure moments when the words of some loved poet touch a deep, sweet chord in the soul that until then had been silent. But in college there is no time to commune with one's thou
+---------- Answer to the question ----------
+The author believed there was not enough time in college because the demands and responsibilities of academic life, such as attending classes, completing assignments, and engaging in various activities, often leave little room for leisure and personal reflection. This busy schedule can make it difficult to find moments of quiet and introspection necessary for communing with one's thoughts or enjoying personal interests, such as reading poetry.
+#############################################################
+---------- Qeuestion 5 ----------
+What did the author study in her first year?
+---------- Retrieved text from the database ----------
+My studies the first year were French, German, history, English composition and English literature. In the Fren
+---------- Answer to the question ----------
+The author studied French, German, history, English composition, and English literature in her first year.
+#############################################################
+---------- Qeuestion 6 ----------
+How much was the author able to concentrate to the lecture compared to her peers?
+---------- Retrieved text from the database ----------
+per at pell-mell speed, I should not think one could pay much attention to the subject under consideration or the manner in which it is presented. I cannot make notes during the lectures, because my hands are busy listening. Usually I jot down what I can remember of them when I get home. I write the exercises, dai
+---------- Answer to the question ----------
+The author suggests that it is challenging to concentrate on the lecture due to the fast pace at which it is delivered. The author experiences additional difficulty because their hands are occupied with "listening," likely referring to the use of Braille or other tactile methods to understand the lecture content. This indicates that they might be at a disadvantage compared to their peers, who can perhaps more easily take notes during the lecture. The author compensates for this by jotting down what they can remember after returning home.
+#############################################################
+---------- Qeuestion 7 ----------
+In one word, what does the author use to write down? Was this important to her?
+---------- Retrieved text from the database ----------
+d not merely a clever imitation. Many scholars forget, it seems to me, that our enjoyment of the great works of literature depends more upon the depth of our sympathy than upon our understanding. The trouble is that very few of their laborious explanations stick in the memory. The mind drops them as a branch drops its overripe fruit. It is possible to know a
+---------- Answer to the question ----------
+The author uses "pen" to write down. Yes, it was important to her.
+#############################################################
+---------- Qeuestion 8 ----------
+What makes her jealous about other girls?
+---------- Retrieved text from the database ----------
+ught that I must spend hours reading a few chapters, while in the world without other girls are laughing and singing and dancing, makes me rebellious; but I soon recover my buoyancy and laugh the discontent out of my heart. For, after all, every one who wishes to gain true knowledge must climb the Hill Difficulty alone, and since there is no royal road to the summit, 
+---------- Answer to the question ----------
+She feels jealous because other girls are able to spend their time laughing, singing, and dancing while she must dedicate hours to studying and reading.
+#############################################################
+---------- Qeuestion 9 ----------
+What did the author like about the composition class in her second year?
+---------- Retrieved text from the database ----------
+Last year, my second year at Radcliffe, I studied English composition, the Bible as English composition, the governments of America and Europe, the Odes of Horace, and Latin comedy. The class in composition was the pleasantest. It was ve
+---------- Answer to the question ----------
+The author found the composition class to be the most pleasant of her studies in her second year.
+#############################################################
+---------- Qeuestion 10 ----------
+How does the author like to enjoy literature works?
+---------- Retrieved text from the database ----------
+d not merely a clever imitation. Many scholars forget, it seems to me, that our enjoyment of the great works of literature depends more upon the depth of our sympathy than upon our understanding. The trouble is that very few of their laborious explanations stick in the memory. The mind drops them as a branch drops its overripe fruit. It is possible to know a
+---------- Answer to the question ----------
+The author enjoys literary works by focusing on the depth of their sympathy rather than on a detailed understanding. They believe that the enjoyment of great literature comes more from emotional connection and empathy rather than from laborious explanations or intellectual analysis.
+#############################################################
+---------- Qeuestion 11 ----------
+What does the author mean when she says "overtaxed mind cannot enjoy the treasure it has secured at the greatest cost"?
+---------- Retrieved text from the database ----------
+s. I suppose I ought to find some comfort in the thought that I am laying up treasures for future enjoyment, but I am improvident enough to prefer present joy to hoarding riches against a rainy day.
+---------- Answer to the question ----------
+When the author says "overtaxed mind cannot enjoy the treasure it has secured at the greatest cost," she is suggesting that if one's mind is overworked or stressed, it will not be able to appreciate or enjoy the benefits or rewards (the "treasure") that have been achieved through hard work or sacrifice. The phrase implies that mental exhaustion or stress can diminish one's ability to find satisfaction or joy in accomplishments, regardless of how valuable or significant they may be. Essentially, the author's message is a reminder of the importance of mental well-being in enjoying life's successes.
+#############################################################
+---------- Qeuestion 12 ----------
+What is Huss an example of?
+---------- Retrieved text from the database ----------
+"Give a brief account of Huss and his work." Huss? Who was he and what did he do? The name looks strangely familiar. You ransack your budget of historic facts much as you would hunt for a bit of silk
+---------- Answer to the question ----------
+Huss is an example of a historical figure prominent in the context of religious reform. Jan Hus (also spelled John Huss) was a Czech theologian and philosopher who became a church reformer and is considered a key predecessor to Protestantism. He was a master at Charles University in Prague and became known for his criticism of the Catholic Church's practices, particularly the sale of indulgences. Hus advocated for reform along lines of the teachings of John Wycliffe, emphasizing scripture as the ultimate authority in matters of faith. His efforts to challenge the Church's authority eventually led to his excommunication and execution by burning at the stake in 1415, making him a martyr for emerging Protestant movements and a symbol for subsequent reformers, such as Martin Luther.
+#############################################################
+---------- Qeuestion 13 ----------
+How did the author feel when she took an exam?
+---------- Retrieved text from the database ----------
+ly themes, criticisms and hour-tests, the mid-year and final examinations, on my typewriter, so that the professors have no difficulty in finding out how little I know. When I began the study of Latin prosody, I devised and explained to my professor a system of signs indicating the different meters and quantities.
+---------- Answer to the question ----------
+The author, Helen Keller, felt a sense of self-awareness and perhaps some self-deprecation when taking exams. In her writing, she often joked about how her written exams clearly demonstrated her lack of knowledge on certain subjects to her professors. This suggests she may have felt a mix of anxiety, humility, and humor during examinations.
+#############################################################
+---------- Qeuestion 14 ----------
+What is one lesson that the author learned through attending college?
+---------- Retrieved text from the database ----------
+ghts. One goes to college to learn, it seems, not to think. When one enters the portals of learning, one leaves the dearest pleasures—solitude, books and imagination—outside with the whispering pine
+---------- Answer to the question ----------
+The author learned that attending college often emphasizes structured learning over personal exploration, suggesting that college might focus more on acquiring knowledge rather than fostering independent thought and imagination.
+#############################################################
+---------- Qeuestion 15 ----------
+What should the author do to improve her life?
+---------- Retrieved text from the database ----------
+ught that I must spend hours reading a few chapters, while in the world without other girls are laughing and singing and dancing, makes me rebellious; but I soon recover my buoyancy and laugh the discontent out of my heart. For, after all, every one who wishes to gain true knowledge must climb the Hill Difficulty alone, and since there is no royal road to the summit, 
+---------- Answer to the question ----------
+The author can take several steps to improve her life, focusing on balance and fulfillment:
+
+1. **Pursue Passionate Interests**: Dedicate time to activities that bring joy and fulfillment, balancing work with leisure.
+
+2. **Set Personal Goals**: Establish clear, achievable goals that align with personal values and aspirations.
+
+3. **Maintain Social Connections**: Engage in meaningful relationships and spend time with friends and family for emotional support.
+
+4. **Practice Self-Care**: Prioritize mental and physical health through activities like exercise, meditation, and adequate rest.
+
+5. **Seek Continuous Learning**: Embrace learning opportunities that ignite curiosity and contribute to personal growth.
+
+6. **Stay Positive**: Develop a positive mindset and practice gratitude to improve overall outlook on life.
+
+7. **Manage Time Wisely**: Implement effective time management strategies to ensure a healthy balance between responsibilities and free time.  
+
+By integrating these practices, the author can enhance her quality of life while continuing to pursue personal and intellectual growth.
