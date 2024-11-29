@@ -1,0 +1,125 @@
+sentence
+#############################################################
+---------- Qeuestion 1 ----------
+On what year did the author start college?
+---------- Retrieved text from the database ----------
+ It was not, therefore, until the fall of 1900 that my dream of going to college was realized
+---------- Answer to the question ----------
+The author started college in the fall of 1900.
+#############################################################
+---------- Qeuestion 2 ----------
+How did the author feel when she joined the college?
+---------- Retrieved text from the database ----------
+" Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+The author initially likely felt optimistic or excited about joining college, as this is a common feeling when starting a new educational endeavor. However, over time, their perception seemed to change as they began to notice the disadvantages of college life. This shift suggests a complexity in their feelings, as the initial enthusiasm may have been tempered by the realities of college experiences that were less favorable than anticipated.
+#############################################################
+---------- Qeuestion 3 ----------
+Was the author disappointed when she faced the reality of college?
+---------- Retrieved text from the database ----------
+" Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+Yes, the author seems to express a sense of disappointment when faced with the reality of college. The phrase "Gradually I began to find that there were disadvantages in going to college" suggests that she discovered downsides that she hadn't anticipated, indicating a shift from initial expectations to a more critical viewpoint.
+#############################################################
+---------- Qeuestion 4 ----------
+Why did the author think that there is no enough time when she joined college?
+---------- Retrieved text from the database ----------
+" Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+The author likely felt there was not enough time when she joined college due to several common reasons. College often comes with an increased workload compared to high school, including more challenging coursework and a greater number of assignments. Additionally, students typically have to balance academics with extracurricular activities, part-time jobs, and social obligations, all of which can make time management difficult. The newfound independence and variety of opportunities might also lead to a feeling of being overwhelmed or stretched thin as students try to take advantage of everything college has to offer.
+#############################################################
+---------- Qeuestion 5 ----------
+What did the author study in her first year?
+---------- Retrieved text from the database ----------
+
+My studies the first year were French, German, history, English composition and English literature
+---------- Answer to the question ----------
+The author studied French, German, history, English composition, and English literature in her first year.
+#############################################################
+---------- Qeuestion 6 ----------
+How much was the author able to concentrate to the lecture compared to her peers?
+---------- Retrieved text from the database ----------
+ The lectures were always interesting, vivacious, witty; for the instructor, Mr
+---------- Answer to the question ----------
+The author was able to concentrate on the lecture to the same extent as her peers. This implies that while she might have been engaged and interested in the lecture delivered by the vivacious and witty instructor, her level of concentration was comparable to that of her classmates, suggesting a shared or common experience among the students in terms of focus and engagement.
+#############################################################
+---------- Qeuestion 7 ----------
+In one word, what does the author use to write down? Was this important to her?
+---------- Retrieved text from the database ----------
+ Many scholars forget, it seems to me, that our enjoyment of the great works of literature depends more upon the depth of our sympathy than upon our understanding
+---------- Answer to the question ----------
+Pen. Yes, it was important to her.
+#############################################################
+---------- Qeuestion 8 ----------
+What makes her jealous about other girls?
+---------- Retrieved text from the database ----------
+ But in this respect I do not think I am much worse off than the girls who take notes
+---------- Answer to the question ----------
+The context suggests that the speaker might feel jealous of the other girls because they are able to take notes, which could imply that they have an advantage in understanding or retaining the information being presented. The speaker might feel at a disadvantage or less capable compared to these girls, leading to feelings of jealousy.
+#############################################################
+---------- Qeuestion 9 ----------
+What did the author like about the composition class in her second year?
+---------- Retrieved text from the database ----------
+ The class in composition was the pleasantest
+---------- Answer to the question ----------
+The author found the composition class in her second year pleasant because it emphasized writing and creative expression. The environment was likely encouraging, fostering a sense of creativity and personal growth. This class might have allowed her to explore writing styles, topics, or themes that resonated with her interests, making the learning experience enjoyable and fulfilling.
+#############################################################
+---------- Qeuestion 10 ----------
+How does the author like to enjoy literature works?
+---------- Retrieved text from the database ----------
+ Many scholars forget, it seems to me, that our enjoyment of the great works of literature depends more upon the depth of our sympathy than upon our understanding
+---------- Answer to the question ----------
+The author suggests that the enjoyment of great works of literature is more dependent on the depth of our sympathy, implying that they value an emotional and empathetic connection with the text over purely intellectual understanding.
+#############################################################
+---------- Qeuestion 11 ----------
+What does the author mean when she says "overtaxed mind cannot enjoy the treasure it has secured at the greatest cost"?
+---------- Retrieved text from the database ----------
+
+There are, however, times when I long to sweep away half the things I am expected to learn; for the overtaxed mind cannot enjoy the treasure it has secured at the greatest cost
+---------- Answer to the question ----------
+The author is expressing the idea that when the mind is overloaded with information or tasks, it becomes difficult to appreciate or benefit from the knowledge or achievements it has obtained. The phrase "overtaxed mind" suggests a mental state that is overwhelmed, which can prevent a person from fully enjoying or valuing the "treasure," or valuable knowledge and experiences, that they have acquired. The "greatest cost" implies that significant effort or sacrifice was made to attain this knowledge, but the overburdened state of mind diminishes the ability to appreciate its worth.
+#############################################################
+---------- Qeuestion 12 ----------
+What is Huss an example of?
+---------- Retrieved text from the database ----------
+
+"Give a brief account of Huss and his work
+---------- Answer to the question ----------
+Huss is an example of a religious reformer. Jan Hus, or John Huss, was a Czech theologian and philosopher who became a key figure in the Bohemian Reformation in the early 15th century. His work centered around advocating for reform within the Catholic Church, criticizing the corruption and excesses of the clergy, and promoting the idea that the Bible should be the primary source of Christian doctrine. Huss's teachings influenced the development of Protestantism, as well as later reformers like Martin Luther. Despite being excommunicated and ultimately executed as a heretic in 1415, Huss's ideas persisted and contributed significantly to later religious reforms.
+#############################################################
+---------- Qeuestion 13 ----------
+How did the author feel when she took an exam?
+---------- Retrieved text from the database ----------
+ When one reads hurriedly and nervously, having in mind written tests and examinations, one's brain becomes encumbered with a lot of choice bric-a-brac for which there seems to be little use
+---------- Answer to the question ----------
+The author likely felt anxious and overwhelmed when taking an exam. The mention of reading "hurriedly and nervously" and having the brain "encumbered with a lot of choice bric-a-brac" suggests a sense of stress and the accumulation of information that may not seem immediately useful, reflecting a common pressure associated with preparing for tests.
+#############################################################
+---------- Qeuestion 14 ----------
+What is one lesson that the author learned through attending college?
+---------- Retrieved text from the database ----------
+" Gradually I began to find that there were disadvantages in going to college
+---------- Answer to the question ----------
+One lesson that the author learned through attending college is that it comes with certain disadvantages. This might include issues such as the rising cost of education, the pressure to conform to certain academic or social norms, the realization that college might not directly lead to guaranteed job opportunities, or that it can sometimes be a diversion from gaining practical, real-world experience.
+#############################################################
+---------- Qeuestion 15 ----------
+What should the author do to improve her life?
+---------- Retrieved text from the database ----------
+" Debarred from the great highways of knowledge, I was compelled to make the journey across country by unfrequented roads—that was all; and I knew that in college there were many bypaths where I could touch hands with girls who were thinking, loving and struggling like me
+---------- Answer to the question ----------
+To improve her life, the author could consider taking several steps:
+
+1. **Seek Alternative Education**: If formal education pathways are inaccessible, exploring online courses, community workshops, or self-study using books and other resources can help continue her learning journey.
+
+2. **Network with Like-minded Individuals**: Engaging with others who share similar interests and challenges can provide support, encouragement, and new perspectives.
+
+3. **Participate in Community or Women's Groups**: These can offer a space for shared experiences, mentoring, and advocacy, helping her connect with others who are “thinking, loving and struggling” like herself.
+
+4. **Advocate for Accessibility**: Joining or supporting initiatives that aim to make education more inclusive can create opportunities for herself and others in similar situations.
+
+5. **Engage in Creative Outlets**: Writing, art, music, or other forms of expression can serve as powerful outlets for personal growth and connection with others.
+
+6. **Volunteer or Internships**: Gaining experience in areas of interest through volunteering or internships can provide valuable skills and build a professional network.
+
+7. **Focus on Personal Development**: Setting personal goals and working on skills like resilience, problem-solving, and communication can enhance her ability to navigate challenges and seize opportunities.
+
+By taking these steps, the author can continue to enrich her life despite the barriers she faces.
