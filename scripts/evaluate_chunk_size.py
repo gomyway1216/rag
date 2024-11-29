@@ -49,7 +49,6 @@ for chunk_size_desc in chunk_sizes:
     elif chunk_size_desc == "half_a_paragraph":
         my_documents_tmp = f.read().split("\n")
         my_documents = []
-        # Computationally heavy. Let's look for a python library.
         for i, chunk_tmp in enumerate(my_documents_tmp):
             for j in range(2):
                 half = len(chunk_tmp) // 2
@@ -59,7 +58,6 @@ for chunk_size_desc in chunk_sizes:
     elif chunk_size_desc == "quarter_a_paragraph":
         my_documents_tmp = f.read().split("\n")
         my_documents = []
-        # Computationally heavy. Let's look for a python library.
         for i, chunk_tmp in enumerate(my_documents_tmp):
             for j in range(4):
                 quarter = len(chunk_tmp) // 4
