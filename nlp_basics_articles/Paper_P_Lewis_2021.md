@@ -9,7 +9,7 @@ Link to the paper: https://arxiv.org/abs/2005.11401
 
 
 ## Abstract
-> Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.
+> Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models that combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, and the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.
 
 ## Highlights of this research
 - Proposed RAG models that use both parametric memory and non-parametric memory (RAG-Sequence model, RAG-Token model)
@@ -18,7 +18,7 @@ Link to the paper: https://arxiv.org/abs/2005.11401
 - Experimented on several benchmarks
 - Proposed models perform better than the SoTA methods
 
-## RAG (Retrieval-Augumented Generation)
+## RAG (Retrieval-Augmented Generation)
 The RAG model used in this paper is illustrated in Figure 1.
 <p align="center">
     <img width="600" alt="Screenshot 2024-12-02 at 01 06 08" src="https://github.com/user-attachments/assets/7fef3192-51dc-44b2-a2ed-11d0e2920aec">
@@ -33,7 +33,7 @@ Components in the model architecture:
 - Database: Stores all given documents.
 - Documents: Subset of documents. $k$ documents are retrieved to be fed to the generator. (Also known as chunks in other works)
 - Previous tokens: Outputs from the model that was produced before this iteration. (Incomplete sentence)
-- Generator: Generates a current token based on given Documents, Input, and Previous tokens..
+- Generator: Generates a current token based on given Documents, Input, and Previous tokens.
 - Current Token: Output from the generator. (A token following the incomplete sentence)
 
 ## Proposed models and their architecture
@@ -42,7 +42,7 @@ They both have basically the same structure. The only difference is in how they 
 **RAG-Sequence model** use the same document to predict each target token (current token).
 **RAG-Token model** predict each target token based on a different document.
 
-The difference between two models is illustrated in Figure 2.
+The difference between the two models is illustrated in Figure 2.
 
 <p align="center">
     <img width="904" alt="Screenshot 2024-12-02 at 00 39 30" src="https://github.com/user-attachments/assets/9089bb04-9259-4768-a7a9-c89044b44cde">
@@ -64,18 +64,18 @@ Figure 2. The difference between RAG-Sequence model and RAG-Token model
 ### Generator: BART (Bidirectional and Auto-Regressive Transformers)
 - **Parametric model**
 - Uses a variant of BART called **BART-large**
-    - BART-large is a pretrained seq2seq transformer model
+    - BART-large is a pre-trained seq2seq transformer model
 - Produces $P_{\theta}(y_{i} | x, z, y_{1,...,i-1})$, which is used for getting current token.
     - $y_{i}$ is current token following previous tokens $y_{1,...,i-1}$
-- Input $x$ and documents $z$ are simply concatenated when they are fed to genetator.
+- Input $x$ and documents $z$ are simply concatenated when they are fed to generator.
 
 ### Training
 - Retriever and Generator are trained together.
 - Objective function: $Minimize ( \sum_{j} -\log p(y_{j} | x_{j}))$
     - intuition: Increase the likelihood of one correct option 
-- Stochastic Gradient Descent: get gradient
-- Adam (Adaptive Moment Estimation): move in the direction of gradient with momentum
-- By the way, fine-tuning the document encoder is very expensive, so fine-tune only query encoder and generator.
+- Stochastic Gradient Descent: get a gradient
+- Adam (Adaptive Moment Estimation): move in the direction of the gradient with momentum
+- By the way, fine-tuning the document encoder is very expensive, so fine-tune only the query encoder and the generator.
 
 ### Decoding
 - For RAG-Token model, use standard beam decoder
@@ -99,7 +99,7 @@ Experiments are done on various knowledge-intensive tasks.
     - Closed book models (no document retrieval. rely only on the parametric dataset, the specific dataset) 
         - T5-11B
         - T5-11B + SSM
-    - Open book models (rely only on non-parametric dataset, the general dataset)
+    - Open book models (rely only on the non-parametric dataset, the general dataset)
         - REALM
         - DPR
     - Proposed models
@@ -112,8 +112,8 @@ Experiments are done on various knowledge-intensive tasks.
     <img width="400" alt="Screenshot 2024-12-02 at 03 12 17" src="https://github.com/user-attachments/assets/c67b7775-2b36-40a9-8924-a3887578a821">
 </p>
 
-As shown in the table above, **proposed RAG models gave the best results** in all cases except for TQA task. The proposed methods are better also because it does not require pre-training that is as expensive as other models.
-Also, proposed RAG models had some capacity to respond the correct answers even when the correct answer was not given in the documents.
+As shown in the table above, **proposed RAG models gave the best results** in all cases except for the TQA task. The proposed methods are better also because it does not require pre-training that is as expensive as other models.
+Also, the proposed RAG models had some capacity to give correct answers even when the correct answer was not given in the documents.
 
 
 ### Abstractive Question Answering
@@ -122,7 +122,7 @@ Also, proposed RAG models had some capacity to respond the correct answers even 
 - Inputs and Outputs
     - Questions as input $x$
     - Answers as predicted output $y$
-    - (gold passage is provided in the dataset, but it is not used. gold passage is specific information for one to answer the question.)
+    - (gold passage is provided in the dataset, but it is not used. Gold passage is specific information for one to answer the question.)
 - Comparison Models
     - SoTA
     - BART
@@ -134,14 +134,14 @@ Also, proposed RAG models had some capacity to respond the correct answers even 
     - B-1: Bleu points
 
 <p align="center">
-    <img width="510" alt="Screenshot 2024-12-02 at 03 12 24" src="https://github.com/user-attachments/assets/959d7ce6-574e-4a2a-b892-c82dee40a3e5">
+    <img width="400" alt="Screenshot 2024-12-02 at 03 12 24" src="https://github.com/user-attachments/assets/959d7ce6-574e-4a2a-b892-c82dee40a3e5">
 </p>
 
-As shown in the middle columns in Table 2, proposed RAG models are not as good as SoTA models but it is approaching. However, the proposed models are performing well considering that SoTA models have access to gold passages.
-The authors also saw that **RAG models has less hallucinations**.
+As shown in the middle columns in Table 2, the proposed RAG models are not as good as SoTA models but it is approaching. However, the proposed models are performing well considering that SoTA models have access to gold passages.
+The authors also saw that **RAG models have fewer hallucinations**.
 
 ### Jeopardy Question Generation
-The task is to generate a question for jeopardy, given an answer. This is a new task.
+The task is to generate a question for jeopardy given an answer. This is a new task.
 - Benchmark dataset
     - SearchQA
 - Inputs and Outputs
@@ -156,10 +156,10 @@ The task is to generate a question for jeopardy, given an answer. This is a new 
     - B-1: Bleu points
     - QB-1: SQuAD-tuned Q-BLEU-1 points
     - human evaluations
-        - factuality: is there trusted source behind the output?
+        - factuality: are there trusted sources behind the output?
         - specificity: high mutual difference between the input and output
 
-As shown in the first two columns in Table 2, proposed RAG-Token model is outperformirng. Also, the human evaluations say that the RAG models had much more factuality and specificity comapred to BART model.
+As shown in the first two columns in Table 2, the proposed RAG-Token model is outperforming. Also, the human evaluations say that the RAG models had much more factuality and specificity compared to the BART model.
 RAG models likely outperformed because Jeopardy questions require two different pieces of information about the answer and the structure of RAG where we retrieve documents matched the style.
 
 ### Fact Verification
@@ -168,7 +168,7 @@ The task is to classify a natural language claim into:
 - Refuted in Wikipedia
 - insufficient information to judge
 
-Classifying into all three is called 3-way classification task, and classifying into only supported or refuted is called 2-way classification task.
+Classifying into all three is called a 3-way classification task, and classifying into only supported or refuted is called a 2-way classification task.
 
 - Benchmark dataset
     - FEVER3 (3-way classification)
@@ -185,14 +185,14 @@ Classifying into all three is called 3-way classification task, and classifying 
 - Evaluation metrics
     - label accuracy
 
-As we can see in the last two columns in Table 2, RAG models are not greatly worse compared to the other models. However, RAG models do not require complex pipeline systems, domain-specific architectures, a lot of tuning, and heavy supervision and yet it is not much worse off. RAG was able to retrieve the supporting Wikipedia documents with high probability. 
+As we can see in the last two columns in Table 2, RAG models are not greatly worse compared to the other models. However, RAG models do not require complex pipeline systems, domain-specific architectures, a lot of tuning, and heavy supervision, and yet it is not much worse off. RAG was able to retrieve the supporting Wikipedia documents with high probability. 
 
 ### Additional Experiments and Results
 - Generation Diversity
-    - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams weas higher than BART model. 
+    - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams was higher than the BART model. 
 - Retrieval Ablations
     - Froze the retrieval learning of the model. The results were worse than when it was not frozen. Learning in retrieval is also helping the RAG models to perform well.
 - Index hot-swapping
-    - Just by swapping the documents in database (the non-parametric memory), RAG models were able to keep up with the updates.
+    - Just by swapping the documents in the database (the non-parametric memory), RAG models were able to keep up with the updates.
 - Effect of Retrieving more documents
     - There was no significant difference between when $k$ is $5$ or $10$. The peak or a good convergence point was at $10$, so keeping it around this value would be suggested.
