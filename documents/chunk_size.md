@@ -1,9 +1,9 @@
 # Chunk Size
 
-Here, we discuss how we **determine a right chunk size** for our project.
+Here, we discuss how we **determine the right chunk size** for our project.
 
 ## What is chunk size?
-Chunk size is the **length of the string sequence that we divide the source documents into**. It varies depending on the purpose, application, language, the size of the source documents, and other factors. Chunk sizes are often in **letters, words, sentences, paragraphs, and documents**.
+Chunk size is the **length of the string sequence that we divide the source documents into**. It varies depending on the purpose, application, language, size of the source documents, and other factors. Chunk sizes are often in **letters, words, sentences, paragraphs, and documents**.
 
 **The unit of the piece of data that is stored into the database** is the chunk size. 
 - **Larger chunks** allow the embedding mechanism to capture a **bigger picture** of the text and **saves memory** space in the database because we get less number of chunks from the source documents given that the embedded chunk size is constant. However, it is prone to **missing small details**, leading to a vague response to a query.
@@ -18,15 +18,14 @@ This book is now public domain because the author died in 1968 and it's been mor
 
 ## Our method
 We use Chapter XX from Helen Keller's journal. We feed one chapter to the database. The chapter is divided into different sizes of chunks:
-- 1 sentence
-- 2 sentences
-- 5 sentences
-- 10 sentences
-- 1 paragraph
+- A paragraph
+- Half a paragraph
+- Quarter a paragraph
+- A sentence
 
-Then, we ask 15 text-related questions that is handcrafted by Carolina. (Carolina is writing this document, btw!)
+Then, we ask 15 text-related questions that is handcrafted by Carolina. 
 
-Lastly, we read the response to the questions from our RAG model and determine which chunk size gives the best reponse. The best is decided by our intuition.
+Lastly, we read the responses to the questions from our RAG model and determine which chunk size gives the best response. The best is decided by our intuition.
 
 Here is a part of her text:
 >  I remember my first day at Radcliffe. It was a day full of interest for me. I had looked forward to it for years. A potent force within me, stronger than the persuasion of my friends, stronger even than the pleadings of my heart, had impelled me to try my strength by the standards of those who see and hear. I knew that there were obstacles in the way; but I was eager to overcome them. I had taken to heart the words of the wise Roman who said, "To be banished from Rome is but to live outside of Rome." Debarred from the great highways of knowledge, I was compelled to make the journey across country by unfrequented roads—that was all; and I knew that in college there were many bypaths where I could touch hands with girls who were thinking, loving and struggling like me.
@@ -47,3 +46,17 @@ Here are the questions:
 > - How did the author feel when she took an exam?
 > - What is one lesson that the author learned through attending college?
 > - What should the author do to improve her life?
+
+## Conclusion
+**Quarter a paragraph** was the best chunk size among the four options in our evaluation method.
+
+A sentence was too short for LLM to understand the context. It gave several unrelated wrong answers.
+Half a paragraph was too long, so a similar chunk to the question was incorrectly picked.
+A paragraph was too long, it distracted LLM from the main point of the question and answer.
+
+Quarter a paragraph also gave answers mixed with incorrect information, but this one had fewer incorrect answers and more correct answers.
+A quarter of a paragraph includes 1-4 sentences each.
+
+Here is an insight from reading the responses:
+The degree of personalization in response depends greatly on the prompt you give to the LLM model. Some gave general answers that were not incorrect but not aligned with the author's writing.
+We may need to specify in the prompt to what degree we want the response to be personalized.
