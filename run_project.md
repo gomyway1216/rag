@@ -1,16 +1,17 @@
-# How to run the project after installing everything
+# Tips for very beginners to work on this project
 This is for **very beginners** like me 😊  
 
-Experienced members helped me build the environment and set everything up. Following are the steps after that. Please correct me if anything is wrong!
+Experienced members helped me to get to this point. 
+Please correct me if anything is wrong!
+
 
 ## Tools
-- Docker: Run applications in an isolated environment
-- ChromaDB: The database to keep your data
-- FastAPI: A main tool to support building your application
 - Postman: API platform
+- Docker Desktop: Environment for your project to run on
 - Visual Studio Code: Write your code here
 - GitHub: Manage your code here
 - Ruff and Black: check and format your code
+
 
 ## Steps
 ### Open tools and terminal windows
@@ -39,6 +40,6 @@ Visual Studio Code, Postman, Docker Desktop, three terminal windows
 5. `git push` to get your updates reflected on GitHub (If they provide a longer command for you to copy-paste, do so.)
 6. Go to your GitHub page
 7. Once you check the difference, if that is good, proceed to make a pull request
-8. If the difference is not okay, make changes to your files and follow steps 2 to 4 again.
+8. If the difference is not okay, make changes to your files and follow steps 2 to 5 again.
 9. When making a pull request, assign Assignees, reviewers, and labels.
 
