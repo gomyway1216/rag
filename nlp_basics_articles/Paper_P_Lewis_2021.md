@@ -12,16 +12,16 @@ Link to the paper: https://arxiv.org/abs/2005.11401
 > Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.
 
 ## Highlights of this research
-- Proposed RAG models that uses both parametric memory and non-parametric memory (RAG-Sequence model, RAG-Token model)
+- Proposed RAG models that use both parametric memory and non-parametric memory (RAG-Sequence model, RAG-Token model)
     - Parametric: Feed **specific dataset** for the model to learn
     - Non-parametric: Feed **general dataset** for the model to learn (Wikipedia dump in this paper)
 - Experimented on several benchmarks
 - Proposed models perform better than the SoTA methods
 
 ## RAG (Retrieval-Augumented Generation)
-The RAG model used in this paper is illustrated as Figure 1.
+The RAG model used in this paper is illustrated in Figure 1.
 <p align="center">
-    /insert a figure here
+    <img width="600" alt="Screenshot 2024-12-02 at 01 06 08" src="https://github.com/user-attachments/assets/7fef3192-51dc-44b2-a2ed-11d0e2920aec">
 </p>
 <p align="center">
 Figure 1. RAG
@@ -34,7 +34,7 @@ Components in the model architecture:
 - Documents: Subset of documents. $k$ documents are retrieved to be fed to the generator. (Also known as chunks in other works)
 - Previous tokens: Outputs from the model that was produced before this iteration. (Incomplete sentence)
 - Generator: Generates a current token based on given Documents, Input, and Previous tokens..
-- Current Token: Output from generator. (A token following the incomplete sentence)
+- Current Token: Output from the generator. (A token following the incomplete sentence)
 
 ## Proposed models and their architecture
 The authors propose two models: RAG-Sequence model and RAG-Token model. 
@@ -42,10 +42,10 @@ They both have basically the same structure. The only difference is in how they 
 **RAG-Sequence model** use the same document to predict each target token (current token).
 **RAG-Token model** predict each target token based on a different document.
 
-The difference between two models are illustrated in Figure 2.
+The difference between two models is illustrated in Figure 2.
 
 <p align="center">
-    /insert a figure here
+    <img width="904" alt="Screenshot 2024-12-02 at 00 39 30" src="https://github.com/user-attachments/assets/9089bb04-9259-4768-a7a9-c89044b44cde">
 </p>
 <p align="center">
 Figure 2. The difference between RAG-Sequence model and RAG-Token model
@@ -109,11 +109,11 @@ Experiments are done on various knowledge-intensive tasks.
     - Exact Match (EM) scores
 
 <p align="center">
-    /insert Table 1 from the paper here
+    <img width="400" alt="Screenshot 2024-12-02 at 03 12 17" src="https://github.com/user-attachments/assets/c67b7775-2b36-40a9-8924-a3887578a821">
 </p>
 
-As shown on the table above, **proposed RAG models gave best results** in all cases except for TQA task. The proposed methods are better also because it does not require pre-training that is as expensive as other models.
-Also, proposed RAG models had some capacity to respond correct answers even when the correct answer was not given in the documents.
+As shown in the table above, **proposed RAG models gave the best results** in all cases except for TQA task. The proposed methods are better also because it does not require pre-training that is as expensive as other models.
+Also, proposed RAG models had some capacity to respond the correct answers even when the correct answer was not given in the documents.
 
 
 ### Abstractive Question Answering
@@ -134,7 +134,7 @@ Also, proposed RAG models had some capacity to respond correct answers even when
     - B-1: Bleu points
 
 <p align="center">
-    /insert Table 2 from the paper here
+    <img width="510" alt="Screenshot 2024-12-02 at 03 12 24" src="https://github.com/user-attachments/assets/959d7ce6-574e-4a2a-b892-c82dee40a3e5">
 </p>
 
 As shown in the middle columns in Table 2, proposed RAG models are not as good as SoTA models but it is approaching. However, the proposed models are performing well considering that SoTA models have access to gold passages.
@@ -159,14 +159,14 @@ The task is to generate a question for jeopardy, given an answer. This is a new 
         - factuality: is there trusted source behind the output?
         - specificity: high mutual difference between the input and output
 
-As shown in the first two columns in Table 2, proposed RAG-Token model is outperformirng. Also, the human evaluations says that the RAG models had much more factuality and specificity comapred to BART model.
+As shown in the first two columns in Table 2, proposed RAG-Token model is outperformirng. Also, the human evaluations say that the RAG models had much more factuality and specificity comapred to BART model.
 RAG models likely outperformed because Jeopardy questions require two different pieces of information about the answer and the structure of RAG where we retrieve documents matched the style.
 
 ### Fact Verification
 The task is to classify a natural language claim into:
 - Supported in Wikipedia
 - Refuted in Wikipedia
-- no enough information to judge
+- insufficient information to judge
 
 Classifying into all three is called 3-way classification task, and classifying into only supported or refuted is called 2-way classification task.
 
@@ -185,11 +185,11 @@ Classifying into all three is called 3-way classification task, and classifying 
 - Evaluation metrics
     - label accuracy
 
-As we can see on the last two columns in Table 2, RAG models are not greatly worse compared to the other models. However, RAG models does not require complex pipeline systems, domain-specific architectures, a lot of tuning, and heavy supervision and yet it is not much worse off. RAG was able to retrieve the supporting wikipedia documents in high probability. 
+As we can see in the last two columns in Table 2, RAG models are not greatly worse compared to the other models. However, RAG models do not require complex pipeline systems, domain-specific architectures, a lot of tuning, and heavy supervision and yet it is not much worse off. RAG was able to retrieve the supporting Wikipedia documents with high probability. 
 
 ### Additional Experiments and Results
 - Generation Diversity
-    - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams were higher than BART model. 
+    - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams weas higher than BART model. 
 - Retrieval Ablations
     - Froze the retrieval learning of the model. The results were worse than when it was not frozen. Learning in retrieval is also helping the RAG models to perform well.
 - Index hot-swapping
