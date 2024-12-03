@@ -191,7 +191,7 @@ As we can see in the last two columns in Table 2, RAG models are not greatly wor
 - Generation Diversity
     - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams was higher than the BART model. 
 - Retrieval Ablations
-    - Froze the retrieval learning of the model. The results were worse than when it was not frozen. Learning in retrieval is also helping the RAG models to perform well.
+    - Froze the retrieval learning of the model; the weights of the retrieval model do not get updated throughout the training period. The results were worse than when it was not frozen. Learning in retrieval is also helping the RAG models to perform well.
 - Index hot-swapping
     - Just by swapping the documents in the database (the non-parametric memory), RAG models were able to keep up with the updates.
 - Effect of Retrieving more documents
