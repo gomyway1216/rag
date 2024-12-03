@@ -15,6 +15,7 @@ Link to the paper: https://arxiv.org/abs/2005.11401
 - Proposed RAG models that use both parametric memory and non-parametric memory (RAG-Sequence model, RAG-Token model)
     - Parametric: Feed **specific dataset** for the model to learn
     - Non-parametric: Feed **general dataset** for the model to learn (Wikipedia dump in this paper)
+    - The retriever of the model has non-parametric memory, and the generator of the model has parametric memory
 - Experimented on several benchmarks
 - Proposed models perform better than the SoTA methods
 
@@ -54,12 +55,17 @@ Figure 2. The difference between RAG-Sequence model and RAG-Token model
 ### Retriever: DPR (Dense Passage Retrieval)
 - **Non-parametric model**
 - BERT (Bidirectional Encoder Representations from Transformers) is used for encoding.
-- It **retrieves relevant information** from the database based on the input. The relevance is how similar the input and a document in the database are, based on the inner-product between encoded input and encoded documents (more similar when inner-product is larger).
+- It **retrieves relevant information** from the database based on the input. The relevance is how similar the input and a document in the database are, based on the inner product between encoded input and encoded documents (more similar when the inner product is larger).
     - $P_{\eta}(z|x) \propto \exp(\textbf{d}(z) ^\top \textbf{q}(x))$ 
     - $\textbf{d}(z) = BERT_{a}(z)$
     - $\textbf{q}(x) = BERT_{q}(x)$
     - $x$ is input, $z$ is document
-- Retrieve $k$ most related documents ($k \in {5, 10}$)
+- Retrieve $k$ most related documents ($k \in {5, 10}$) **using a neural model**.
+    - The process of looking for $k$ most related documents is called the Maximum Inner Product Search (MIPS) problem.  
+    - In this paper, an efficient method of solving the MIPS problem is used. (The method: https://arxiv.org/abs/1702.08734)
+    - The retrieving model is trainable because it is based on a neural model. The pre-trained weights are used for initial weights.
+    - This retrieving model refers to the non-parametric model in this paper.
+    - The retrieving model is trained together with the generator. It is trained so that the performance of retrieval from the given specific information improves.
 
 ### Generator: BART (Bidirectional and Auto-Regressive Transformers)
 - **Parametric model**
@@ -67,7 +73,7 @@ Figure 2. The difference between RAG-Sequence model and RAG-Token model
     - BART-large is a pre-trained seq2seq transformer model
 - Produces $P_{\theta}(y_{i} | x, z, y_{1,...,i-1})$, which is used for getting current token.
     - $y_{i}$ is current token following previous tokens $y_{1,...,i-1}$
-- Input $x$ and documents $z$ are simply concatenated when they are fed to generator.
+- Input $x$ and documents $z$ are simply concatenated when they are fed to the generator.
 
 ### Training
 - Retriever and Generator are trained together.
