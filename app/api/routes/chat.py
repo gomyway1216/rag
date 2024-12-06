@@ -56,8 +56,23 @@ def query(chat_request: ChatRequest):
 
 @router.post("/learn", status_code=204)
 def learn(learn_request: LearnRequest):
-    learn_collection.add(
-        documents=[learn_request.text],
-        ids=[uuid.uuid4().hex],
-    )
+
+    documents_paragraphs = learn_request.text.split("\n")
+
+    for document_sequence in documents_paragraphs:
+
+        split_into = 4
+        quarter = len(document_sequence) // split_into
+        document_quarters = [
+            document_sequence[i * quarter : (i + 1) * quarter]
+            for i in range(split_into - 1)
+        ]
+        document_quarters.append(document_sequence[(split_into - 1) * quarter :])
+
+        for document in document_quarters:
+            learn_collection.add(
+                documents=[document],
+                ids=[uuid.uuid4().hex],
+            )
+
     return
