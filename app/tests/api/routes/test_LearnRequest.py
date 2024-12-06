@@ -8,9 +8,7 @@ def test_learn_request_under_limit(client: TestClient):
             "text": "dog",
         },
     )
-    print(response.json())
     assert response.status_code == 422
-
     assert response.json() == {
         "detail": [
             {
@@ -32,10 +30,6 @@ def test_learn_request_right_on_inclusive_limit(client: TestClient):
         },
     )
     assert response.status_code == 204
-
-    # assert response.json() == {"detail": [
-    #    {"loc": ["body", "text"], "msg": "String should have at least 4 characters", "input": "cats", "ctx": {"min_length": 4}}
-    # ]}
 
 
 def test_learn_request_one_sentence(client: TestClient):
