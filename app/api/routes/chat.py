@@ -60,7 +60,6 @@ def learn(learn_request: LearnRequest):
     SPLIT_INTO = 4  # Chunk size of quarter a paragraph is the best based on our preliminary experiment
 
     # input text should contain exactly one paragraph per line
-    # the input text length must be at least 4
     documents_paragraphs = learn_request.text.split("\n")
 
     for document_sequence in documents_paragraphs:
