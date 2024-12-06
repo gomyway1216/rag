@@ -57,22 +57,22 @@ def query(chat_request: ChatRequest):
 @router.post("/learn", status_code=204)
 def learn(learn_request: LearnRequest):
 
+    SPLIT_INTO = 4  # Chunk size of quarter a paragraph is the best based on our preliminary experiment
+
     documents_paragraphs = learn_request.text.split("\n")
 
     for document_sequence in documents_paragraphs:
 
-        split_into = 4
-        quarter = len(document_sequence) // split_into
+        quarter = len(document_sequence) // SPLIT_INTO
         document_quarters = [
             document_sequence[i * quarter : (i + 1) * quarter]
-            for i in range(split_into - 1)
+            for i in range(SPLIT_INTO - 1)
         ]
-        document_quarters.append(document_sequence[(split_into - 1) * quarter :])
+        document_quarters.append(document_sequence[(SPLIT_INTO - 1) * quarter :])
 
-        for document in document_quarters:
-            learn_collection.add(
-                documents=[document],
-                ids=[uuid.uuid4().hex],
-            )
+        learn_collection.add(
+            documents=document_quarters,
+            ids=[uuid.uuid4().hex for _ in range(SPLIT_INTO)],
+        )
 
     return
