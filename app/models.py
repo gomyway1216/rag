@@ -10,7 +10,7 @@ class ChatResponse(BaseModel):
 
 
 class LearnRequest(BaseModel):
-    text: str = Field(description="The text to be learned by the chatbot")
+    text: str = Field(min_length=4, description="The text to be learned by the chatbot")
 
 
 class BMIRequest(BaseModel):
