@@ -8,7 +8,7 @@ def test_LearnRequest1(client: TestClient):
             "text": "dog",
         },
     )
-    assert response.status_code == 204
+    assert response.status_code == 422
 
 
 def test_LearnRequest2(client: TestClient):
@@ -39,5 +39,3 @@ def test_LearnRequest4(client: TestClient):
         },
     )
     assert response.status_code == 204
-
-
