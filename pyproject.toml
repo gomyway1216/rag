@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 chromadb = "0.5.20"
-openai = "1.56.0"
+openai = "1.57.0"
 fastapi = {extras = ["standard"], version = "0.115.5"}
 
 
