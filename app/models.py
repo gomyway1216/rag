@@ -14,10 +14,12 @@ class LearnRequest(BaseModel):
 
 
 class BMIRequest(BaseModel):
-    # FIXME: Add min and max values to the fields
-    # FIXME: Add a description about units (cm, kg)
-    weight: float = Field(description="Weight value requested to calculate BMI.")
-    height: float = Field(description="Height value requested to calculate BMI.")
+    weight: float = Field(
+        ge=0, description="Weight value [kg] requested to calculate BMI."
+    )
+    height: float = Field(
+        ge=0, description="Height value [cm] requested to calculate BMI."
+    )
 
 
 class BMIResponse(BaseModel):
