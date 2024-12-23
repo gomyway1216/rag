@@ -55,6 +55,13 @@ Visual Studio Code, Postman, Docker Desktop, three terminal windows
     6. Copy-paste those to your test cases' code (eg: test_health.py)
     7. Refer to https://docs.pytest.org/en/stable/index.html for writing code for test cases
 1. Make sure your Docker is up
+2. ```docker exec -it fastapi pytest```
+
+
+Alternatively,
+
+0. Implement code for test cases
+1. Make sure your Docker is up
 2. Go to Docker Desktop App
 3. Choose FastAPI and open Exec tab
 4. Go to your project's directory (rag directory)
