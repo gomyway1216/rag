@@ -197,8 +197,51 @@ As we can see in the last two columns in Table 2, RAG models are not greatly wor
 - Generation Diversity
     - Responses from RAG models had more diversity in writing. The ratio/number of tri-grams was higher than the BART model. 
 - Retrieval Ablations
-    - Froze the retrieval learning of the model; the weights of the retrieval model do not get updated throughout the training period. The results were worse than when it was not frozen. Learning in retrieval is also helping the RAG models to perform well.
+    - Froze the retrieval learning of the model; the weights of the retrieval model do not get updated throughout the training period. The results were worse than when it was not frozen. Learning in retrieval also helps the RAG models perform well.
 - Index hot-swapping
     - Just by swapping the documents in the database (the non-parametric memory), RAG models were able to keep up with the updates.
 - Effect of Retrieving more documents
     - There was no significant difference between when $k$ is $5$ or $10$. The peak or a good convergence point was at $10$, so keeping it around this value would be suggested.
+
+## Mathematical Terms
+### Mariginalize
+#### Marginalizing is combining several probabilities into one probability.
+
+P(α) being the probability of α, marginalizing is represented as:
+<p align="center">
+<img width="280" alt="Screenshot 2024-12-22 at 12 23 15" src="https://github.com/user-attachments/assets/5d4ebb82-580e-4073-b45b-deb873a2c66e" />
+
+
+For example, 
+There are 10 fruits. 
+- 3 green apples
+- 5 red apples
+- 2 oranges
+  
+Here, we know that the probability of blindly picking a fruit of a kind is
+- P(green apple) = 0.3
+- P(red apple) = 0.5
+- P(orange) = 0.2
+
+Marginalizing is
+- P(apple)
+ = P(green apple) + P(red apple)
+ = 0.3 + 0.5
+ = 0.8
+
+(reference: https://towardsdatascience.com/probability-concepts-explained-marginalisation-2296846344fc)
+
+#### How marginalizing is used in the context of this paper is as follows.
+Intuitively, one token is inferred by combining candidates of tokens. Marginalizing is possible because the tokens are represented in probability (like Softmax).
+<!-- I don't have the deepest understanding.. :'( But I'm sure this is what they mean intuitively. -->
+
+A paper nicely explains marginalization in the context of NLP: https://aclanthology.org/2020.emnlp-main.255/
+
+<kbd>
+<img width="427" alt="Screenshot 2024-12-22 at 12 40 43" src="https://github.com/user-attachments/assets/577fc02a-ad1f-493d-b548-a675c9f99afe" />
+<img width="427" alt="Screenshot 2024-12-22 at 12 44 28" src="https://github.com/user-attachments/assets/46106fc5-307f-4c59-95a0-7e2c5e6a9241" />
+</kbd>
+
+
+
+
