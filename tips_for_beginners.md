@@ -11,6 +11,7 @@ Please correct me if anything is wrong!
 - Visual Studio Code: Write your code here
 - GitHub: Manage your code here
 - Ruff and Black: check and format your code
+- Pytest: A framework for test cases
 
 
 ## Steps
@@ -31,7 +32,7 @@ Visual Studio Code, Postman, Docker Desktop, three terminal windows
 2. `docker exec -it fastapi sh` start using the virtual environment (container)
 3. You see many #s. Don't be surprised 😉
 4. `python3 path_to_your_file/your_python_file.py` now you can see your file running! Yay!
-### Saving your progress and updating it in GitHub
+### Save your progress and updating it in GitHub
 0. Suppose you made changes to `your_python_file.py`
 1. In the second terminal window, where you operated `git` commands,
 2. Check and clean your code first by doing: `ruff check your_python_file.py` and `black your_python_file.py`
@@ -43,3 +44,26 @@ Visual Studio Code, Postman, Docker Desktop, three terminal windows
 8. If the difference is not okay, make changes to your files and follow steps 2 to 5 again.
 9. When making a pull request, assign Assignees, reviewers, and labels.
 
+### Run test cases
+0. Implement code for test cases
+    1. Go to Postman
+    2. Choose HTML method (eg: POST)
+    3. enter URL next to it (eg: localhost:8000/bmi) <!-- is it called URL? -->
+    (You specified your URL in your other file like this above your function: ```@router.post("/bmi", response_model=BMIResponse, status_code=200)```)
+    4. Type your variables into the Body section
+    5. Send and get the results 
+    6. Copy-paste those to your test cases' code (eg: test_health.py)
+    7. Refer to https://docs.pytest.org/en/stable/index.html for writing code for test cases
+1. Make sure your Docker is up
+2. ```docker exec -it fastapi pytest```
+
+
+Alternatively,
+
+0. Implement code for test cases
+1. Make sure your Docker is up
+2. Go to Docker Desktop App
+3. Choose FastAPI and open Exec tab
+4. Go to your project's directory (rag directory)
+5. ```pytest path_to_your_file/your_python_file.py``` and now you see your test results!
+(eg: ```pytest app/tests/api/routes/test_health.py```)
