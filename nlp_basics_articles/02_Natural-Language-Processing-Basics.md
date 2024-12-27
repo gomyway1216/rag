@@ -73,6 +73,72 @@ Figure 6. Q&A
 ## Basic concepts in NLP
 The basic concepts used in NLP are tokens, positional encoding, embedding, and encoder/decoder.
 
-# tokens
-One token of a sequence is generated from the input sequence, representing the smallest language unit.
+### One-hot encoding
+This is a way of expressing non-numerical values such as YES/NO, Dog/Cat/Pig/Hedgehog, language vocabulary, etc.
+
+One-hot encoding indicates an element out of all other elements. Examples are as follows:
+
+**YES, NO** \
+YES: [1, 0] \
+NO: [0, 1] 
+
+**Dog, Cat, Pig, Hedgehog** \
+Dog: [1, 0, 0, 0] \
+Cat: [0, 1, 0, 0] \
+Pig: [0, 0, 1, 0] \
+Hedgehog: [0, 0, 0, 1]
+
+**Language Vocabulary** \
+(The length of the vector is the number of vocabulary words/sub-words) \
+Ant: [1, 0, 0, …, 0, 0] \
+Apple:  [0, 1, 0, …, 0, 0] \
+Art:  [0, 0, 1, …, 0, 0] \
+… \
+Zebra:  [0, 0, 0, …, 1, 0] \
+Zoo:  [0, 0, 0, …, 0, 1]
+
+Labels are used in supervised learning. They are paired with each element in training/test data.
+Labels are represented using one-hot encoding most of the time. The illustration is given below.
+
+<p align="center">
+<img width="928" alt="Screenshot 2024-12-26 at 12 42 50" src="https://github.com/user-attachments/assets/1614794b-a982-4ea1-bf19-bce962b6de7e" /> 
+</p>
+<p align="center">
+Figure 7. Label in Image Classification
+</p>
+
+<p align="center">
+<img width="928" alt="Screenshot 2024-12-26 at 12 43 01" src="https://github.com/user-attachments/assets/88fe417e-ece5-4fa5-9856-53f2f6a72299" />
+</p>
+<p align="center">
+Figure 8. Label in Next-word Prediction
+</p>
+
+<p align="center">
+<img width="928" alt="Screenshot 2024-12-26 at 12 43 09" src="https://github.com/user-attachments/assets/7999aa16-4226-463c-987a-eef91ae1c940" />
+</p>
+<p align="center">
+Figure 9. Label in Sentiment Classification
+</p>
+
+
+### Tokens
+One token of a sequence is generated from a portion of the input sequence, representing the smallest language unit. (Eg: word, sub-word, punctuation) \
+They are often represented in one-hot encoding or a representation generated from one-hot encoding or similar vectors.
+
+<!--
+### Loss
+-->
+
+### String distance
+There are several ways to show how distant two strings are to each other. Some of them are explained here.
+1. Levenshtein distance
+   - Distance between two strings, calculated by the minimum number of single-character edits. The edits are: insert, delete, substitute
+2. Dameran-Levenshtein distance
+   - In addition to the above, swapping is allowed as one of the operations.
+3. Hamming distance
+   - This is the distance for the strings of the same length. It is the number of positions that the character is not the same.
+
+
+
 
